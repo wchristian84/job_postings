@@ -1,0 +1,13 @@
+<h1>Search Results</h1>
+<%= form_with url: "../../jobs/search", method: :get do |form| %>
+    <%= form.label :query, "Search for a job:" %>
+    <%= form.text_field :query %>
+    <%= form.submit %>
+<% end %>
+
+<% @postings.each do |posting| %>
+<h2><%= posting.title %></h2>
+<p>Company: <%= posting.company %></p>
+<p>Salary: <%= posting.salary %></p>
+<p>Location: <%= posting.location %></p>
+<% end %>

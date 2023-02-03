@@ -1,0 +1,8 @@
+<h1>Remote Job Postings</h1>
+
+<% @postings.each do |posting| %>
+    <h2><%= posting.title %></h2>
+    <p>Company: <%= posting.company %></p>
+    <p>Salary: <%= posting.salary %></p>
+    <p>Location: <%= posting.location %></p>
+<% end %>
